@@ -1,0 +1,5 @@
+@morpho/data-structures/=lib/data-structures/
+@rari-capital/solmate/=lib/solmate/
+forge-std/=lib/forge-std/src/
+@config/=config/${NETWORK}
+@contracts/=contracts/

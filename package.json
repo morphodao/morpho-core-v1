@@ -1,0 +1,83 @@
+{
+  "name": "@morphodao/morpho-core-v1",
+  "version": "1.0.0",
+  "description": "Core contracts of Morpho's protocol V1",
+  "main": "",
+  "files": [
+    "contracts"
+  ],
+  "scripts": {
+    "test": "npx hardhat test",
+    "lint": "yarn lint:sol && yarn lint:ts",
+    "lint:ts": "eslint . --ext .ts",
+    "lint:sol": "solhint 'contracts/**/*.sol'",
+    "fix": "yarn fix:sol && yarn fix:ts",
+    "fix:ts": "prettier --config .prettierrc.json './**/*.ts' --write",
+    "fix:sol": "prettier --write './contracts/**/*.sol' && prettier --write './test-foundry/**/*.sol'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morphodao/morpho-core-v1.git"
+  },
+  "keywords": [
+    "finance",
+    "smart-contracts",
+    "decentralized",
+    "blockchain",
+    "defi",
+    "money-market"
+  ],
+  "author": "Merlin Egalite <merlin@morpho.xyz>",
+  "contributors": [
+    "Mathis Gontier Delaunay <mathis@morpho.xyz>",
+    "Gabriel Astières <gabriel@morpho.xyz>",
+    "Nicolas Pasquier <nicolas@morpho.xyz>",
+    "Romain Milon <romain@morpho.xyz>",
+    "Julien Thomas <julien@moroho.xyz>"
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/morphodao/morpho-core-v1/issues"
+  },
+  "homepage": "https://github.com/morphodao/morpho-core-v1#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "2.0.2",
+    "@nomiclabs/hardhat-etherscan": "3.0.0",
+    "@nomiclabs/hardhat-waffle": "2.0.1",
+    "@tenderly/hardhat-tenderly": "1.0.13",
+    "@types/chai": "4.2.22",
+    "@types/mocha": "9.0.0",
+    "@types/node": "17.0.8",
+    "@typescript-eslint/eslint-plugin": "5.4.0",
+    "@typescript-eslint/parser": "5.4.0",
+    "chai": "4.3.4",
+    "decimal.js": "10.3.1",
+    "dotenv": "10.0.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "ethereum-waffle": "3.4.0",
+    "ethers": "5.4.1",
+    "hardhat": "2.5.0",
+    "hardhat-contract-sizer": "2.0.3",
+    "hardhat-deploy": "0.9.1",
+    "hardhat-gas-reporter": "1.0.4",
+    "merkletreejs": "0.2.31",
+    "module-alias": "2.2.2",
+    "prettier": "2.3.2",
+    "prettier-plugin-solidity": "1.0.0-beta.13",
+    "solhint": "3.3.6",
+    "solhint-plugin-prettier": "0.0.5",
+    "solidity-coverage": "0.7.16",
+    "ts-node": "10.4.0",
+    "typescript": "4.5.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "4.5.0",
+    "@openzeppelin/contracts-upgradeable": "4.5.2",
+    "@rari-capital/solmate": "6.2.0"
+  },
+  "_moduleAliases": {
+    "@config": "config",
+    "@test": "test"
+  }
+}
